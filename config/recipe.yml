@@ -26,6 +26,14 @@ modules:
     install:
       # - micro
       # - starship
+      # Group 'Development Tools' (for homebrew)
+      - diffstat
+      - doxygen
+      - patch
+      - patchutils
+      - procps-ng
+      - subversion
+      - systemtap
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
@@ -72,7 +80,6 @@ modules:
       # - container-tools # installs container-related tools onto /usr/bin: kind, kubectx, docker-compose and kubens
       # - laptop # installs TLP and configures your system for laptop usage
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
-
 
   # - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
                   #  will be installed and set up

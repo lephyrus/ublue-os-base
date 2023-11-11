@@ -5,5 +5,5 @@ GenericName=Launcher
 Categories=Utility;System;
 Exec=/usr/share/ublue-os/firstboot/launcher/autostart.sh
 Icon=application-x-executable
-Terminal=false
+Terminal=true
 Type=Application
