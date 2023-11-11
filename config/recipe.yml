@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: os-base
+name: ublue-os-base
 # description will be included in the image's metadata
 description: My personal uBlue image (see https://ublue.it/making-your-own/)
 
