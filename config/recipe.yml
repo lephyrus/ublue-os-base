@@ -30,6 +30,34 @@ modules:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
+  - type: default-flatpaks
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - org.gnome.Calculator
+        - org.gnome.Snapshot
+        - org.gnome.Connections
+        - org.gnome.baobab
+        - org.gnome.Evince
+        - com.mattjakeman.ExtensionManager
+        - org.gnome.font-viewer
+        - org.gnome.Loupe
+        - org.gnome.Photos
+        - org.gnome.NautilusPreviewer
+        - org.gnome.TextEditor
+        - com.github.tchx84.Flatseal
+        - org.gustavoperedo.FontDownloader
+        - org.mozilla.firefox
+    # A flatpak repo can also be added without having to install flatpaks,
+    # as long as one of the repo- fields is present
+    user:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      repo-title: "Flathub (user)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+
   - type: bling # configure what to pull in from ublue-os/bling
     install:
       - justfiles # add "!include /usr/share/ublue-os/just/100-bling.just"
@@ -46,9 +74,9 @@ modules:
       # - flatpaksync # allows synchronization of user-installed flatpaks, see separate documentation section
 
 
-  - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
-                #  will be installed and set up
-    custom-flatpaks: # this section is optional
+  # - type: yafti # if included, yafti and it's dependencies (pip & libadwaita)
+                  #  will be installed and set up
+    # custom-flatpaks: # this section is optional
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
 
