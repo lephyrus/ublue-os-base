@@ -80,6 +80,19 @@ modules:
       # - Celluloid: io.github.celluloid_player.Celluloid
       # - Krita: org.kde.krita
 
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - FiraCode # don't add "Nerd Font" suffix.
+        - Hack
+        - Iosevka
+        - IosevkaTerm
+        - SourceCodePro
+        - NerdFontsSymbolsOnly
+      google-fonts:
+        - Roboto
+        - Open Sans
+
   - type: script
     scripts:
       # this sets up the proper policy & signing files for signed images to work
